@@ -1,0 +1,25 @@
+<phpunit colors="true" stopOnError="true" verbose="true">
+    <testsuites>
+        <testsuite name="product">
+            <file>tests/ProductServiceMockTest.php</file>
+            <file>tests/ProductServiceTest.php</file>
+        </testsuite>
+        <testsuite name="counter">
+            <file>tests/CounterStaticTest.php</file>
+            <file>tests/CounterTest.php</file>
+        </testsuite>
+        <testsuite name="all">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
+
+<!-- colors bernilai true berarti saat phpunit dijalankan hasilnya akan berwarna -->
+<!-- stopOnError bernilai true berarti jika terjadi error maka phpunit akan berhenti dan tidak melanjutkan ke unittest selanjutnya -->
+<!-- verbose bernilai true berarti saat phpunit dijalankan log testnya akan sangat detail -->
+<!-- directory adalah termpat kita menyimpan semua file unit test kita -->
+
+<!-- * Test Suite * -->
+<!-- Saat kita menggunakan PHPUnit configuration, kita bisa membuat beberapa test suite -->
+<!-- Aggap saja test suite ini seperti grub atau fitur didalam unit test. misalnya kita ingin mengelompokkan tiap fitur pada unit test kita, lalu kita hanya ingin menjalankan phpunit pada kelompok fitur yang kita inginkan saja-->
+<!-- pada kasus seperti diatas, kita bisa membuat test suite yang berbeda untuk mengelompokkan tiap fitur, sehingga saat menjalankan unit test, kita bisa memilih test suite mana yang ingin kita jalankan -->
